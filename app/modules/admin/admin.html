@@ -1,0 +1,36 @@
+<h4><strong>admin panel:</strong> &lt;{{admin.mod.name}}&gt;</h4>
+<div ng-show="admin.msg.text" class="alert alert-warning">
+	<strong>{{admin.msg.text}}</strong>
+	<a ng-show="admin.msg.adv" ng-click="isAdvMsg = !isAdvMsg">more...</a>
+	<div ng-show="isAdvMsg">
+		<p>
+			<small>{{admin.msg.adv}}</small>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-2">
+		<table class="table table-condensed">
+			<thead>
+				<tr class="info">
+					<td><strong>tables</strong></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a ui-sref="admin.ticketAdmin" id="a_ticketAdmin">ticket</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a ui-sref="admin.supportingDocumentAdmin" id="a_supportingDocumentAdmin">supporting document</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-sm-10">
+		<div ui-view></div>
+	</div>
+</div>

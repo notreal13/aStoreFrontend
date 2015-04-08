@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>aStore</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="aStoreFrontend" ng-controller="MainController as main">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div class="container-fluid">
+      <div class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- <div class="navbar-header"> -->
+            <ul class="nav navbar-nav">
+              <li>
+                <a class="brand-logo" href="#">
+                  <img alt="Brand" src="images/logo_mini2.png">
+                </a>
+              </li>
+              <li>
+                <span class="navbar-text brand-text" translate>Anrusstrans</span>
+              </li>
+              <li ng-controller="CartStatusController as cart">
+                <a href="#/cart" id="a_cart"><img src="images/cart.gif" alt="cart"/>
+                  <!-- <span id="b" style="visibility:hidden" ng-style="{'visibility': main.b}"> -->
+                  <span ng-cloak>
+                    <span ng-show="cart.size === 0" id="label_cart_empty" translate>Empty</span>
+                    <span ng-show="cart.size !== 0" id="label_cart_full" translate translate-n="cart.size" translate-plural="{{$count}} items" >1 item</span>
+                    <span translate>in cart</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <!-- </div> -->
+            <ul class="nav navbar-nav pull-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hi, <span ng-bind="main.userInfo.firstName || 'anonymous'"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-if="main.isAuthorized('admin')">
+                  <a href="#/admin" id="a_admin">Admin panel</a>
+                </li>
+                <li ng-if="main.isAuthorized('admin')" class="divider"></li>
+                <li ng-if="!main.isAuthenticated">
+                  <a href="#/login" id="a_login" ng-click="main.savePath()" translate>login</a>
+                </li>
+                <li ng-if="!main.isAuthenticated">
+                  <a href="#/signup" id="a_signup" ng-click="main.savePath()" translate>signup</a>
+                </li>
+                <li ng-if="main.isAuthenticated">
+                  <a href="#/order" id="a_my_orders" translate>my orders</a>
+                </li>
+                <li ng-if="main.isAuthenticated" class="divider"></li>
+                <li ng-if="main.isAuthenticated">
+                  <a href="#" id="a_logout" ng-click="main.logout()" translate>logout</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="navbar-text language-label" translate>Language:</span>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle language-dropdown" id="menu_language" data-toggle="dropdown" role="button" aria-expanded="false">{{main.selectedLanguage.name}}<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="language in main.languages"><a ng-click="main.translate(language)" id={{'lang_'+language.id}}>{{language.name}}</a></li>
+              </ul>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- <div ng-view=""></div> -->
+      <div ui-view=""></div>
+      <div class="footer" ng-cloak>
+        <div ng-if="main.isAuthorized('admin')">You're admin.</div>
+      </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/asmcrypto/asmcrypto.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="modules/app.js"></script>
+    <script src="modules/main.controller.js"></script>
+    <script src="modules/translations.js"></script>
+    <script src="modules/constants.js"></script>
+    <script src="modules/directives.js"></script>
+    
+    <script src="modules/cart/cart.controller.js"></script>
+    <script src="modules/cart/cart.service.js"></script>
+    <script src="modules/cart/cart-status.controller.js"></script>
+    <script src="modules/cart/supportingDocument.service.js"></script>
+    
+    <script src="modules/category/category.controller.js"></script>
+    <script src="modules/category/category.service.js"></script>
+    
+    <script src="modules/checkout/checkout.controller.js"></script>
+    <script src="modules/checkout/checkout.service.js"></script>
+
+    <script src="modules/order/order.controller.js"></script>
+    <script src="modules/order/order.service.js"></script>
+
+    <script src="modules/route/route.controller.js"></script>
+    <script src="modules/route/route.service.js"></script>
+
+    <script src="modules/ticket/ticket.controller.js"></script>
+    <script src="modules/ticket/ticket.service.js"></script>
+
+    <script src="modules/security/login.controller.js"></script>
+    <script src="modules/security/request.service.js"></script>
+    <script src="modules/security/user.service.js"></script>
+    <script src="modules/security/auth.service.js"></script>
+    <script src="modules/security/salt.service.js"></script>
+    <script src="modules/security/session.service.js"></script>
+    <script src="modules/security/signup.controller.js"></script>
+    <script src="modules/security/signup.service.js"></script>
+    <script src="modules/security/accessDenied.controller.js"></script>
+    
+    <script src="modules/admin/admin.controller.js"></script>
+    <script src="modules/admin/admin.service.js"></script>
+    <script src="modules/admin/infoAdmin.controller.js"></script>
+    <script src="modules/admin/ticketAdmin.controller.js"></script>
+    <script src="modules/admin/supportingDocumentAdmin.controller.js"></script>
+
+    <script src="modules/security/asmcrypto.service.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

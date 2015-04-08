@@ -1,0 +1,238 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: app/index.html:39
+msgid "1 item"
+msgid_plural "{{$count}} items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: app/modules/ticket/ticket.html:16
+msgid "Add to cart"
+msgstr ""
+
+#: app/index.html:32
+msgid "Anrusstrans"
+msgstr ""
+
+#: app/modules/ticket/ticket.html:1
+msgid "Back"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:46
+#: app/modules/security/login.html:19
+#: app/modules/security/signup.html:20
+msgid "Cancel"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:3
+msgid "Checkout"
+msgstr ""
+
+#: app/modules/ticket/ticket.html:2
+msgid "Choose ticket:"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:57
+msgid "Continue shopping"
+msgstr ""
+
+#: app/modules/order/order.html:6
+msgid "Cost"
+msgstr ""
+
+#: app/index.html:37
+msgid "Empty"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:19
+msgid "First name :"
+msgstr ""
+
+#: app/index.html:66
+msgid "Language"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:25
+msgid "Last name :"
+msgstr ""
+
+#: app/modules/security/login.html:17
+msgid "Login"
+msgstr ""
+
+#: app/modules/security/login.html:8
+#: app/modules/security/login.html:9
+msgid "Password"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:37
+msgid "Phone :"
+msgstr ""
+
+#: app/modules/cart/cart.html:67
+msgid "Remove"
+msgstr ""
+
+#: app/modules/security/signup.html:18
+msgid "Signup"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:43
+msgid "Submit purchase"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:55
+msgid "The order confirmation number is:"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:8
+msgid "Total"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:54
+msgid "Your  order has been processed."
+msgstr ""
+
+#: po/langkeys.html:3
+msgid "adult"
+msgstr ""
+
+#: po/langkeys.html:7
+msgid "atv"
+msgstr ""
+
+#: po/langkeys.html:8
+msgid "avto1"
+msgstr ""
+
+#: po/langkeys.html:9
+msgid "avto2"
+msgstr ""
+
+#: po/langkeys.html:10
+msgid "avto3"
+msgstr ""
+
+#: po/langkeys.html:11
+msgid "bike"
+msgstr ""
+
+#: po/langkeys.html:12
+msgid "bus1"
+msgstr ""
+
+#: po/langkeys.html:13
+msgid "bus2"
+msgstr ""
+
+#: po/langkeys.html:14
+msgid "bus3"
+msgstr ""
+
+#: po/langkeys.html:15
+msgid "bus4"
+msgstr ""
+
+#: po/langkeys.html:4
+msgid "child1"
+msgstr ""
+
+#: po/langkeys.html:5
+msgid "child2"
+msgstr ""
+
+#: po/langkeys.html:6
+msgid "child3"
+msgstr ""
+
+#: app/index.html:40
+msgid "in cart"
+msgstr ""
+
+#: po/langkeys.html:29
+msgid "kavkaz_krym"
+msgstr ""
+
+#: po/langkeys.html:28
+msgid "krym_kavkaz"
+msgstr ""
+
+#: app/index.html:52
+msgid "login"
+msgstr ""
+
+#: app/index.html:61
+msgid "logout"
+msgstr ""
+
+#: po/langkeys.html:1
+msgid "man"
+msgstr ""
+
+#: app/index.html:58
+msgid "my orders"
+msgstr ""
+
+#: app/index.html:55
+msgid "signup"
+msgstr ""
+
+#: po/langkeys.html:16
+msgid "skuter"
+msgstr ""
+
+#: po/langkeys.html:17
+msgid "skuter1"
+msgstr ""
+
+#: po/langkeys.html:18
+msgid "trailer1"
+msgstr ""
+
+#: po/langkeys.html:19
+msgid "trailer101"
+msgstr ""
+
+#: po/langkeys.html:20
+msgid "trailer102"
+msgstr ""
+
+#: po/langkeys.html:21
+msgid "trailer103"
+msgstr ""
+
+#: po/langkeys.html:22
+msgid "trailer104"
+msgstr ""
+
+#: po/langkeys.html:23
+msgid "trailer105"
+msgstr ""
+
+#: po/langkeys.html:24
+msgid "trailer2"
+msgstr ""
+
+#: po/langkeys.html:25
+msgid "trailer3"
+msgstr ""
+
+#: po/langkeys.html:26
+msgid "trailer4"
+msgstr ""
+
+#: po/langkeys.html:27
+msgid "tricycle"
+msgstr ""
+
+#: po/langkeys.html:2
+msgid "vehicle"
+msgstr ""
+
+#: app/modules/ticket/ticket.html:9
+msgid "{{currentTicket.name}}"
+msgstr ""

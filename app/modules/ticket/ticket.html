@@ -1,0 +1,25 @@
+<button type="button" style="margin-bottom: 25px;" id="btn_back" class="btn btn-default btn-large" ng-click="ticket.goBack()" translate>Back</button>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title" translate>Choose ticket:</div>
+    </div>
+    <table class="table table-striped">
+        <tr ng-repeat="currentTicket in ticket.allTickets">
+            <td>
+                <!--{{currentTicket}}-->
+                <img ng-src="../images/ticket/{{currentTicket.name}}.png" alt="{{currentTicket.name}}"/>
+            </td>
+            <td>
+                {{currentTicket.name | translate}}
+            </td>
+            <td>
+                {{currentTicket.price | currency : "&#8381;"}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" id={{'btn_'+currentTicket.name}} ng-click="ticket.addToCart(currentTicket)" translate>
+                Add to cart
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,50 @@
+[
+    {
+        "category": {
+            "id": 1,
+            "name": "man"
+        },
+        "dataLabel": "",
+        "description": "",
+        "id": 1,
+        "lastUpdate": "2014-12-19T11:36:38+04:00",
+        "name": "adult",
+        "price": 162.0
+    },
+    {
+        "category": {
+            "id": 1,
+            "name": "man"
+        },
+        "dataLabel": "",
+        "description": "",
+        "id": 2,
+        "lastUpdate": "2014-12-19T11:36:38+04:00",
+        "name": "child1",
+        "price": 0.0
+    },
+    {
+        "category": {
+            "id": 1,
+            "name": "man"
+        },
+        "dataLabel": "",
+        "description": "",
+        "id": 3,
+        "lastUpdate": "2014-12-19T11:36:38+04:00",
+        "name": "child2",
+        "price": 81.0
+    },
+    {
+        "category": {
+            "id": 1,
+            "name": "man"
+        },
+        "dataLabel": "",
+        "description": "",
+        "id": 4,
+        "lastUpdate": "2014-12-19T11:36:45+04:00",
+        "name": "child3",
+        "price": 162.0
+    }
+]

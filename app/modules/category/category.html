@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title" translate>Category</div>
+	</div>
+	<ul ng-repeat="currentCategory in category.allCategories">
+		<li>
+			<a ng-href="#/ticket/{{currentCategory.id}}" id={{'a_'+currentCategory.name}}>
+				<img ng-src="../images/category/{{currentCategory.name}}.png" alt="{{currentCategory.name}}"/>
+				{{currentCategory.name | translate}}
+			</a>
+		</li>
+	</ul>
+</div>

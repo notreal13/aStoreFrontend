@@ -1,0 +1,20 @@
+<button type="button" id="addData" class="btn btn-success" ng-click="ticketAdmin.addData()">add</button>
+<button type="button" id="removeData" class="btn btn-danger" ng-click="ticketAdmin.removeDataConfirm()">remove</button>
+<div id="gridTicket" ui-grid="ticketAdmin.gridOptions" ui-grid-edit ui-grid-row-edit ui-grid-pagination ui-grid-resize-columns ui-grid-cellNav class="myGrid"></div>
+<div id="myModal" class="modal fade modal-wide">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>Do you want to remove: {{ticketAdmin.focusedRow}} ?</p>
+				<p class="text-warning"><small>Data will be lost</small></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+				<button type="button" class="btn btn-danger" ng-click="ticketAdmin.removeData()" data-dismiss="modal">remove</button>
+			</div>
+		</div>
+	</div>
+</div>

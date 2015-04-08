@@ -1,0 +1,16 @@
+[
+    {
+        "amount": 0,
+        "confirmationNumber": 11501,
+        "dateCreated": "2015-01-15T16:55:46+04:00",
+        "email": "oleg@setco.ru",
+        "firstName": "\u041e\u043b\u0435\u0433",
+        "lastName": "\u0421\u043e\u0440\u043e\u043a\u0438\u043d",
+        "orderedTicketCollection": [],
+        "phone": "123",
+        "route": {
+            "id": 1,
+            "name": "kavkaz_krym"
+        }
+    }
+]

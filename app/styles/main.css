@@ -1,0 +1,165 @@
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+/* Space out content a bit */
+body { 
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+button.disabled {
+    color: #000000;
+    cursor: default;
+    text-decoration: none;
+    padding-left: 100px;
+}
+
+.header .brand-logo {
+  padding: 10px 3px 10px 10px;
+}
+
+.header .brand-text {
+  margin: 15px 15px 15px 3px;
+  font-weight: 600;
+}
+
+.header .language-label {
+  margin: 15px 3px 15px 15px;
+}
+
+.header .language-dropdown {
+  padding: 15px 15px 15px 3px;
+}
+
+img.arrow-krym {
+    position: relative;
+    left: 175px;
+    top: 305px;
+}
+
+img.arrow-kavkaz {
+    left: 345px;
+    position: relative;
+    top: 305px;
+}
+
+#errorMsg {
+    color: #d14;
+}
+
+select.year {
+  width: 90px;
+}
+
+select.month {
+  width: 60px;
+}
+
+img.root_map {
+  width: 653px;
+  min-width: 653px;
+  height: 408px;
+  min-height: 408px;
+}
+
+.myGrid {
+  height: 600px;
+  margin-top: 10px;
+}
+
+.modal-wide .modal-dialog {
+  width: 80%;
+}

@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: yo2\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.7.3\n"
+
+#: app/index.html:39
+msgid "1 item"
+msgid_plural "{{$count}} items"
+msgstr[0] "{{$count}} билет"
+msgstr[1] "{{$count}} билета"
+msgstr[2] "{{$count}} билетов"
+
+#: app/modules/ticket/ticket.html:16
+msgid "Add to cart"
+msgstr "Добавить в корзину"
+
+#: app/index.html:32
+msgid "Anrusstrans"
+msgstr "АнРуссТранс"
+
+#: app/modules/ticket/ticket.html:1
+msgid "Back"
+msgstr "Назад"
+
+#: app/modules/checkout/checkout.html:46 app/modules/security/login.html:19
+#: app/modules/security/signup.html:20
+msgid "Cancel"
+msgstr "Отмена"
+
+#: app/modules/checkout/checkout.html:3
+msgid "Checkout"
+msgstr "Заказ"
+
+#: app/modules/ticket/ticket.html:2
+msgid "Choose ticket:"
+msgstr "Выберите тип билета"
+
+#: app/modules/checkout/checkout.html:57
+msgid "Continue shopping"
+msgstr "Продолжить покупки"
+
+#: app/modules/order/order.html:6
+msgid "Cost"
+msgstr "Стоимость"
+
+#: app/index.html:37
+msgid "Empty"
+msgstr "Пусто"
+
+#: app/modules/checkout/checkout.html:19
+msgid "First name :"
+msgstr "Имя:"
+
+#: app/index.html:66
+msgid "Language"
+msgstr ""
+
+#: app/modules/checkout/checkout.html:25
+msgid "Last name :"
+msgstr "Фамилия:"
+
+#: app/modules/security/login.html:17
+msgid "Login"
+msgstr "Логин"
+
+#: app/modules/security/login.html:8 app/modules/security/login.html:9
+msgid "Password"
+msgstr "Пароль"
+
+#: app/modules/checkout/checkout.html:37
+msgid "Phone :"
+msgstr "Телефон"
+
+#: app/modules/cart/cart.html:67
+msgid "Remove"
+msgstr "Удалить"
+
+#: app/modules/security/signup.html:18
+msgid "Signup"
+msgstr "Регистрация"
+
+#: app/modules/checkout/checkout.html:43
+msgid "Submit purchase"
+msgstr "Подтвердить заказ"
+
+#: app/modules/checkout/checkout.html:55
+msgid "The order confirmation number is:"
+msgstr "Номер заказа"
+
+#: app/modules/checkout/checkout.html:8
+msgid "Total"
+msgstr "Полная стоимость"
+
+#: app/modules/checkout/checkout.html:54
+msgid "Your  order has been processed."
+msgstr "Ваш заказ подтвержден"
+
+#: po/langkeys.html:3
+msgid "adult"
+msgstr "взрослый"
+
+#: po/langkeys.html:7
+msgid "atv"
+msgstr "Квадроциклы"
+
+#: po/langkeys.html:8
+msgid "avto1"
+msgstr ""
+"Легковые автомобили, включая джипы и грузовые автомобили на базе легковых "
+"длиною до 4 м 20 см"
+
+#: po/langkeys.html:9
+msgid "avto2"
+msgstr ""
+"Легковые автомобили, включая джипы и грузовые автомобили на базе легковых "
+"длиною от 4 м 20 см до 5 м 10 см"
+
+#: po/langkeys.html:10
+msgid "avto3"
+msgstr ""
+"Легковые автомобили и грузовые автомобили на базе легковых, длиною свыше 5м "
+"11 см"
+
+#: po/langkeys.html:11
+msgid "bike"
+msgstr "Велосипед, мопед"
+
+#: po/langkeys.html:12
+msgid "bus1"
+msgstr "Автобусы пассажировместимостью от 9 до 17 мест"
+
+#: po/langkeys.html:13
+msgid "bus2"
+msgstr "Автобусы пассажировместимостью до 30 мест"
+
+#: po/langkeys.html:14
+msgid "bus3"
+msgstr "Автобусы пассажировместимостью свыше 30 мест"
+
+#: po/langkeys.html:15
+msgid "bus4"
+msgstr "Автобусы пассажировместимостью до 30 мест, но длинной свыше 11м"
+
+#: po/langkeys.html:4
+msgid "child1"
+msgstr "дети до 6 лет"
+
+#: po/langkeys.html:5
+msgid "child2"
+msgstr "дети от 6 лет до 12 лет"
+
+#: po/langkeys.html:6
+msgid "child3"
+msgstr "дети от 12 лет и старше"
+
+#: app/index.html:40
+msgid "in cart"
+msgstr "в корзине"
+
+#: po/langkeys.html:29
+msgid "kavkaz_krym"
+msgstr "Кавказ -> Крым"
+
+#: po/langkeys.html:28
+msgid "krym_kavkaz"
+msgstr "Крым -> Кавказ"
+
+#: app/index.html:52
+msgid "login"
+msgstr "Войти"
+
+#: app/index.html:61
+msgid "logout"
+msgstr "Выйти"
+
+#: po/langkeys.html:1
+msgid "man"
+msgstr "Пассажир"
+
+#: app/index.html:58
+msgid "my orders"
+msgstr "Мои заказы"
+
+#: app/index.html:55
+msgid "signup"
+msgstr "Регистрация"
+
+#: po/langkeys.html:16
+msgid "skuter"
+msgstr "Мотоциклы и скутеры без коляски"
+
+#: po/langkeys.html:17
+msgid "skuter1"
+msgstr "Мотоциклы и скутеры с коляской"
+
+#: po/langkeys.html:18
+msgid "trailer1"
+msgstr "Прицепы к легковым автомобилям длиной до 3,0 м"
+
+#: po/langkeys.html:19
+msgid "trailer101"
+msgstr "Транспортные средства длиной до 5 метров"
+
+#: po/langkeys.html:20
+msgid "trailer102"
+msgstr "Транспортные средства длиной от 5,01 м до 7 м"
+
+#: po/langkeys.html:21
+msgid "trailer103"
+msgstr "Транспортные средства длиной от 7,01 м до 9 м"
+
+#: po/langkeys.html:22
+msgid "trailer104"
+msgstr "Транспортные средства длиной от 9,01 м до 12 м"
+
+#: po/langkeys.html:23
+msgid "trailer105"
+msgstr ""
+"Транспортные средства длиной от 12,01 м до 16 м, весом брутто не более 18 "
+"тонн"
+
+#: po/langkeys.html:24
+msgid "trailer2"
+msgstr "Прицепы к легковым автомобилям длиной от 3,01 м до 4,20 м"
+
+#: po/langkeys.html:25
+msgid "trailer3"
+msgstr "Прицепы к легковым автомобилям длиной от 4,20 м до 5,10 м"
+
+#: po/langkeys.html:26
+msgid "trailer4"
+msgstr "Прицепы к легковым автомобилям длиной свыше 5,10 м"
+
+#: po/langkeys.html:27
+msgid "tricycle"
+msgstr "Трициклы"
+
+#: po/langkeys.html:2
+msgid "vehicle"
+msgstr "Транспорт"
+
+#: app/modules/ticket/ticket.html:9
+msgid "{{currentTicket.name}}"
+msgstr "q"
+
+#~ msgid "language"
+#~ msgstr "язык"
+
+#~ msgid "Confirm password"
+#~ msgstr "Подтвердите пароль"
+
+#~ msgid "FUCK5ff"
+#~ msgstr "q"
+
+#~ msgid "File"
+#~ msgstr "Файл"
+
+#~ msgid "First name"
+#~ msgstr "Имя"
+
+#~ msgid "Hello!"
+#~ msgstr "Привет!"
+
+#~ msgid "Last name"
+#~ msgstr "Фамилия"
+
+#~ msgid "One boat"
+#~ msgid_plural "{{$count}} boats"
+#~ msgstr[0] "Одна лодка"
+#~ msgstr[1] "{{$count}} лодки"
+#~ msgstr[2] "{{$count}} лодок"
+
+#~ msgid "Phone"
+#~ msgstr "Номер телефона"
+
+#~ msgid "Table"
+#~ msgstr "Стол"
+
+#~ msgid "one item"
+#~ msgid_plural "{{$count}} items"
+#~ msgstr[0] "один билет"
+#~ msgstr[1] "{{$count}} билета"
+#~ msgstr[2] "{{$count}} билетов"
+
+#~ msgid "FUCK-FUCK"
+#~ msgstr "q"
+
+#~ msgid "EMPTY"
+#~ msgstr "ЗЗЗ"

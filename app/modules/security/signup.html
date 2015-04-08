@@ -1,0 +1,82 @@
+<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+    <div ng-show="signup.msg.error" class="alert alert-danger" id="signup_msg_error">
+        <strong translate>{{signup.msg.error}}</strong>
+    </div>
+    <div ng-show="signup.msg.success" class="alert alert-success" id="signup_msg_success">
+        <span translate>Signup success</span>
+        <a ng-click="signup.cancel()" id="a_goto_back">back</a>
+        ({{signup.counter}})
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title" translate>Sign up</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#/login">Login</a></div>
+        </div>
+        <div class="panel-body" >
+            <form name="signupForm" class="form-horizontal" role="form" ng-submit="signup.signup(signup.user)" novalidate>
+                <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <p>Error:</p>
+                    <span></span>
+                </div>
+                    <div class="form-group has-feedback">
+                        <label for="username" class="col-md-3 control-label" translate>Username</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.username.$invalid && signupForm.username.$dirty, 'has-success': signupForm.username.$valid}">
+                            <input type="email" class="form-control" name="username" placeholder="{{'email' | translate}}" ng-model="signup.user.username" required autofocus>
+                            <span ng-show="signupForm.username.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <label for="password" class="col-md-3 control-label" translate>Password</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.password.$invalid && signupForm.password.$dirty, 'has-success': signupForm.password.$valid}">
+                            <input type="password" class="form-control" name="password" placeholder="{{'password' | translate}}" ng-model="signup.user.password" required>
+                            <span ng-show="signupForm.password.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label for="repeatPassword" class="col-md-3 control-label" translate>Repeat password</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.repeatPassword.$invalid && signupForm.repeatPassword.$dirty, 'has-success': signupForm.repeatPassword.$valid}">
+                            <input type="password" class="form-control" name="repeatPassword" placeholder="repeat password" ng-model="signup.user.passwordConfirm" match="signup.user.password" required>
+                            <span ng-show="signupForm.repeatPassword.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- <div ng-show="signupForm.repeatPassword.$error.match">PASSWORDS do not match!</div> -->
+                    <div class="form-group has-feedback">
+                        <label for="firstName" class="col-md-3 control-label" translate>First name</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.firstName.$invalid && signupForm.firstName.$dirty, 'has-success': signupForm.firstName.$valid}">
+                            <input type="text" class="form-control" name="firstName" placeholder="first name" ng-model="signup.user.firstName" required>
+                            <span ng-show="signupForm.firstName.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <label for="lastName" class="col-md-3 control-label" translate>Second name</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.lastName.$invalid && signupForm.lastName.$dirty, 'has-success': signupForm.lastName.$valid}">
+                            <input type="text" class="form-control" name="lastName" placeholder="second name" ng-model="signup.user.lastName" required>
+                            <span ng-show="signupForm.lastName.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <label for="phone" class="col-md-3 control-label">Phone</label>
+                        <div class="col-md-9 has-feedback" ng-class="{'has-error': signupForm.phone.$invalid && signupForm.phone.$dirty, 'has-success': signupForm.phone.$valid}">
+                            <input type="text" class="form-control" name="phone" placeholder="phone" ng-model="signup.user.phone" required>
+                            <span ng-show="signupForm.phone.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <button type="submit" class="btn btn-success" ng-disabled="signupForm.$invalid" translate><i class="glyphicon glyphicon-hand-right"></i>&nbsp;Sign up</button>
+                            <button type="button" class="btn btn-primary" ng-click="signup.cancel()" translate>Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

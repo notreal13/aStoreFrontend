@@ -1,0 +1,61 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title" translate>History orders</div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th translate>Order number</th>
+                    <th translate>Order date</th>
+                    <th translate>Cost</th>
+                    <th translate>Contact</th>
+                    <th translate>Contact email</th>
+                    <th translate>Route</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="curOrder in order.allOrders" ng-click="order.selectOrder(curOrder)" ng-class="{'success' :order.selectedOrder === curOrder}">
+                    <td>{{curOrder.confirmationNumber}}</td>
+                    <td>{{curOrder.dateCreated| date : 'medium'}}</td>
+                    <td>{{curOrder.amount | currency:"&#8381;"}}</td>
+                    <td>{{curOrder.firstName}} {{curOrder.lastName}}</td>
+                    <td>{{curOrder.email}}</td>
+                    <td>{{[curOrder.route.name] | translate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div ng-show="order.selectedOrder">
+    
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <div class="panel-title" translate>Ordered tickets</div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th translate>Category</th>
+                        <th translate>Type</th>
+                        <th translate>First name</th>
+                        <th translate>Last name</th>
+                        <th translate>Middle name</th>
+                        <th translate>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ticket in order.selectedOrder.orderedTicketList">
+                        <td>{{ticket.ticket.category.name | translate}}</td>
+                        <td>{{ticket.ticket.name | translate}}</td>
+                        <td>{{ticket.firstName}}</td>
+                        <td>{{ticket.lastName}}</td>
+                        <td>{{ticket.middleName}}</td>
+                        <td>{{ticket.ticket.price | currency:"&#8381;"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

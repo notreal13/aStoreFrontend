@@ -1,0 +1,133 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title" translate>Cart</div>
+    </div>
+    <div class="panel-body">
+        <form name="cartForm" class="form-horizontal" role="form" novalidate>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th translate>ticket</th>
+                        <th translate>price</th>
+                        <th translate>data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ticket in cart.tickets" ng-form="ticketForm" id={{'tr_'+$index}}>
+                        <td class="col-sm-1 col-md-2">
+                            <div class="media">
+                                <img class="thumbnail media-object" ng-src="../images/ticket/{{ticket.name}}.png" alt="{{ticket.name}}">
+                                <span class="badge">{{ticket.name | translate}}</span>
+                            </div>
+                        </td>
+                        <td class="col-sm-1" style="text-align: center">
+                            <h4 style="margin-right: 25px">{{ticket.price | currency:"&#8381;"}}</h4>
+                        </td>
+                        <td class="col-sm-9 col-md-8">
+                            <div ng-if="ticket.category.id === 1">
+                                <div class="form-group has-feedback">
+                                    <label for="firstName" class="col-md-2 control-label" translate>First name</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.firstName.$invalid && ticketForm.firstName.$dirty, 'has-success': ticketForm.firstName.$valid}">
+                                        <input type="text" class="form-control" name="firstName" placeholder="first name" ng-model="ticket.firstName" required>
+                                        <span ng-show="ticketForm.firstName.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="lastName" class="col-md-2 control-label" translate>Last name</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.lastName.$invalid && ticketForm.lastName.$dirty, 'has-success': ticketForm.lastName.$valid}">
+                                        <input type="text" class="form-control" name="lastName" placeholder="last name" ng-model="ticket.lastName" required>
+                                        <span ng-show="ticketForm.lastName.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="middleName" class="col-md-2 control-label" translate>Middle name</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.middleName.$invalid && ticketForm.middleName.$dirty, 'has-success': ticketForm.middleName.$valid}">
+                                        <input type="text" class="form-control" name="middleName" placeholder="middle name" ng-model="ticket.middleName" required>
+                                        <span ng-show="ticketForm.middleName.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="col-md-2 control-label" translate>Date of birth</label>
+                                    <div class="col-md-3 has-feedback" style="padding-right: 0" ng-class="{'has-error': ticketForm.day.$invalid && ticketForm.day.$dirty, 'has-success': ticketForm.day.$valid}">
+                                        <select class="form-control" name="day" ng-model="ticket.dob.day" ng-options="day for day in ticket.days" ng-change="cart.updateDob(ticket)" required>
+                                            <option value="" selected="" translate>day</option>
+                                        </select>
+                                        <span ng-show="ticketForm.day.$valid" class="glyphicon glyphicon-ok form-control-feedback" style="margin-right: 10px"></span>
+                                    </div>
+                                    <div class="col-md-4 has-feedback" ng-class="{'has-error': ticketForm.month.$invalid && ticketForm.month.$dirty, 'has-success': ticketForm.month.$valid}">
+                                        <select class="form-control" name="month" ng-model="ticket.dob.month" ng-options="month.name for month in cart.months" ng-change="cart.updateDob(ticket)" required>
+                                            <option value="" selected="" translate>month</option>
+                                        </select>
+                                        <span ng-show="ticketForm.month.$valid" class="glyphicon glyphicon-ok form-control-feedback" style="margin-right: 10px"></span>
+                                    </div>
+                                    <div class="col-md-3 has-feedback" style="padding-left: 0" ng-class="{'has-error': ticketForm.year.$invalid && ticketForm.year.$dirty, 'has-success': ticketForm.year.$valid}">
+                                        <select class="form-control" name="year" style="padding: 0" ng-model="ticket.dob.year" ng-options="year for year in cart.years" ng-change="cart.updateDob(ticket)" required>
+                                            <option value="" selected="" translate>year</option>
+                                        </select>
+                                        <span ng-show="ticketForm.year.$valid" class="glyphicon glyphicon-ok form-control-feedback" style="margin-right: 10px"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="ticket.category.id === 2">
+                                <div class="form-group has-feedback">
+                                    <label for="licensePlate" class="col-md-2 control-label" translate>Licanse plate</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.licensePlate.$invalid && ticketForm.licensePlate.$dirty, 'has-success': ticketForm.licensePlate.$valid}">
+                                        <input type="text" class="form-control" name="licensePlate" placeholder="license plate" ng-model="ticket.licensePlate" required>
+                                        <span ng-show="ticketForm.licensePlate.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div>
+                                <div class="form-group has-feedback">
+                                    <label for="supportingDocument" class="col-md-2 control-label" translate>Supporting document</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.supportingDocument.$invalid && ticketForm.supportingDocument.$dirty, 'has-success': ticketForm.supportingDocument.$valid}">
+                                        <select class="form-control" name="supportingDocument" ng-model="ticket.supportingDocument" ng-options="document.name for document in cart.allSupportingDocuments | filter:{category:{id:ticket.category.id}}" required>
+                                            <option label="doc"></option>
+                                        </select>
+                                        <span ng-show="ticketForm.supportingDocument.$valid" class="glyphicon glyphicon-ok form-control-feedback" style="margin-right: 10px"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label for="supportingDocumentData" class="col-md-2 control-label" translate>Document data</label>
+                                    <div class="col-md-10 has-feedback" ng-class="{'has-error': ticketForm.supportingDocumentData.$invalid && ticketForm.supportingDocumentData.$dirty, 'has-success': ticketForm.supportingDocumentData.$valid}">
+                                        <input type="text" class="form-control" name="supportingDocumentData" placeholder="document data" ng-model="ticket.supportingDocumentData" required>
+                                        <span ng-show="ticketForm.supportingDocumentData.$valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-1">
+                            <button type="button" class="btn btn-danger" style="margin-left: 25px" ng-click="cart.remove(ticket)">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <!-- footer -->
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><h3 translate>Total</h3></td>
+                        <td class="text-right"><h3><strong>{{cart.total | currency:"&#8381;"}}</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn btn-default" ng-click="cart.continueShopping()" translate>
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            Continue shopping
+                            </button>
+                        </td>
+                        <td>
+                            <a href="#/checkout" id="a_checkout" ng-disabled="cartForm.$invalid" class="btn btn-success" translate>
+                                <!-- <button type="button" ng-disabled="true" class="btn btn-success" translate> -->
+                                Checkout
+                                <span class="glyphicon glyphicon-play"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
